@@ -1580,6 +1580,8 @@ self.C3_ExpressionFuncs = [
 		() => "Full",
 		() => "Empty",
 		() => "3px solid  orange",
+		() => "border-radius",
+		() => "2 px",
 		() => "submit_user",
 		() => "https://ubuntu.tail2124eb.ts.net/g3/submit",
 		p => {
@@ -1589,28 +1591,17 @@ self.C3_ExpressionFuncs = [
 			return () => (and((((("{\"name\":\"" + v0.GetValue()) + "\",\"email\":\"") + v1.GetValue()) + "\",\"phone\":\""), v2.GetValue()) + "\"}");
 		},
 		() => "POST",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			const v1 = p._GetNode(1).GetVar();
-			const v2 = p._GetNode(2).GetVar();
-			return () => and((((("Name: " + v0.GetValue()) + " | email: ") + v1.GetValue()) + " | Phone number: "), v2.GetValue());
-		},
-		() => "submit",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject("id");
-		},
 		() => 9,
 		() => 50,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
-			return () => f0(n1.ExpObject(), 10);
+			return () => f0(n1.ExpObject());
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
-			return () => f0(n1.ExpObject());
+			return () => f0(n1.ExpObject(), 10);
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1622,12 +1613,8 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			return () => f0(n1.ExpObject(), "[^0-9]", "", "");
 		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const n1 = p._GetNode(1);
-			return () => f0(n1.ExpObject(), "@");
-		},
-		() => -1
+		() => "^[\\w.-]+@[\\w.-]+\\.\\w+$",
+		() => "i"
 ];
 
 

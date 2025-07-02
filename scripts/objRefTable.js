@@ -86,7 +86,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Date.Exps.GetMonth,
 		C3.Plugins.Date.Exps.GetYear,
 		C3.Plugins.Button.Acts.SetEnabled,
-		C3.Plugins.Button.Acts.SetVisible,
 		C3.Plugins.Text.Acts.SetOpacity,
 		C3.Plugins.Json.Acts.Parse,
 		C3.Plugins.AJAX.Exps.LastData,
@@ -99,19 +98,19 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.System.Cnds.CompareBetween,
 		C3.Plugins.Text.Exps.Text,
+		C3.Plugins.Button.Acts.SetVisible,
 		C3.Plugins.System.Cnds.ForEach,
 		C3.Plugins.System.Cnds.PickAll,
-		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.Button.Cnds.OnClicked,
 		C3.Plugins.TextBox.Acts.SetCSSStyle,
 		C3.Plugins.TextBox.Exps.Text,
 		C3.Plugins.AJAX.Cnds.OnComplete,
+		C3.Plugins.System.Exps.len,
 		C3.Plugins.TextBox.Acts.SetText,
 		C3.Plugins.System.Exps.left,
-		C3.Plugins.System.Exps.len,
 		C3.Plugins.TextBox.Cnds.OnTextChanged,
 		C3.Plugins.System.Exps.regexreplace,
-		C3.Plugins.System.Exps.find
+		C3.Plugins.System.Cnds.RegexTest
 	];
 };
 self.C3_JsPropNameTable = [
