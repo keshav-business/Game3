@@ -1551,6 +1551,12 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => ("Data" + f0());
 		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => and((and("Sending score: ", v0.GetValue()) + " discount: "), v1.GetValue());
+		},
+		() => "Discount",
 		() => 3.9,
 		() => "5% CONSULTATION",
 		() => 4.9,
