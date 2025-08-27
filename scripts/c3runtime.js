@@ -1527,26 +1527,6 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => ((v0.GetValue()) < (3) ? 1 : 0);
 		},
-		() => 3.9,
-		() => "5% CONSULTATION",
-		() => 4.9,
-		() => "7.5% CONSULTATION",
-		() => 7.5,
-		() => 5.9,
-		() => "10% CONSULTATION",
-		() => 10,
-		() => 6.9,
-		() => "15% CONSULTATION",
-		() => 15,
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			return () => f0(f1());
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => ("0" + n0.ExpObject());
-		},
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject("player_id");
@@ -1571,17 +1551,29 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => ("Data" + f0());
 		},
+		() => 3.9,
+		() => "5% CONSULTATION",
+		() => 4.9,
+		() => "7.5% CONSULTATION",
+		() => 7.5,
+		() => 5.9,
+		() => "10% CONSULTATION",
+		() => 10,
+		() => 6.9,
+		() => "15% CONSULTATION",
+		() => 15,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => f0(f1());
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => ("0" + n0.ExpObject());
+		},
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpInstVar();
-		},
-		() => "submit-associate",
-		() => "https://ubuntu.tail2124eb.ts.net/g3/submit-associate",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			const v1 = p._GetNode(1).GetVar();
-			const v2 = p._GetNode(2).GetVar();
-			return () => (and((and((("{\"player_id\":\"" + v0.GetValue()) + "\",\"rating\":"), v1.GetValue()) + ",\"discount\":"), v2.GetValue()) + "}");
 		},
 		() => "Full",
 		() => "Empty",
